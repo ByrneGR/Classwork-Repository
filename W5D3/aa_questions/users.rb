@@ -1,10 +1,11 @@
 require_relative 'questions_database'
-require_relative 'question'
-require_relative 'question_follow'
-require_relative 'question_like'
-require_relative 'reply'
+require_relative 'questions'
+require_relative 'question_follows'
+require_relative 'question_likes'
+require_relative 'replies'
 
 class Users
+      attr_accessor :id, :fname, :lname
     def self.find_by_id(id)
       user = QuestionsDatabase.instance.execute(<<-SQL, id)
 
@@ -28,15 +29,13 @@ class Users
       FROM
         users
       WHERE
-        fname = ? AND lname = ? 
+        fname = ? AND lname = ?
       SQL
       
       return nil if user.nil? 
-      Users.new(user)
+      Users.new(user.first)
     end
 
-
-    attr_accessor :id, :fname, :lname
 
     def initialize(options)
       @id = options['id']

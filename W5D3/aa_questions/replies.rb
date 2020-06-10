@@ -1,7 +1,7 @@
 require_relative 'questions_database'
-require_relative 'question'
-require_relative 'question_follow'
-require_relative 'question_like'
+require_relative 'questions'
+require_relative 'question_follows'
+require_relative 'question_likes'
 require_relative 'users'
 
 class Replies
@@ -74,7 +74,14 @@ class Replies
         Replies.find_by_id(parent_reply_id)
     end
 
-    def child_replies
-        Replies.find_by_user_id(id)
+    # def child_reply
+    #     Replies.find_by_id(self.parent_reply)
+    # end
+
+    def child_replies(parent_reply_id)
+        question_reply = QuestionsDatabase.instance.execute(<<-SQL, parent_reply_id)
+        ( SELECT id FROM replies WHERE parent_reply_id = ?)
+        SQL
+        Replies.find_by_id(question_reply)
     end
 end

@@ -1,3 +1,9 @@
+require_relative 'questions_database'
+require_relative 'questions'
+require_relative 'replies'
+require_relative 'question_likes'
+require_relative 'users'
+
 class Question_follows
      def self.find_by_id(id)
       question_follow = QuestionsDatabase.instance.execute(<<-SQL, id)

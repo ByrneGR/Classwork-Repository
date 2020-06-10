@@ -60,25 +60,33 @@ INSERT INTO
   users (fname, lname)
 VALUES
   ('Grizzly', 'Adams'),
-  ('Jane', 'Doe');
+  ('Jane', 'Doe'),
+  ('Patsy', 'Klein');
+  
 
 INSERT INTO
   questions (title, body, author_id)
 VALUES
-  ('Hallmark Card', 'How do you write so many funny cards?', (SELECT id FROM users));
+  ('Grizzly Question', 'How do you write so many funny cards?', (SELECT id FROM users WHERE fname = 'Grizzly' AND lname = 'Adams')),
+  ('Jane Question', 'Whats your favorite book?', (SELECT id FROM users WHERE fname = 'Jane' AND lname = 'Doe')),
+  ('Patsy Question', 'Where do?', (SELECT id FROM users WHERE fname = 'Patsy' AND lname = 'Klein'));
 
 INSERT INTO
   question_follows (user_id, question_id)
 VALUES
-  ((SELECT id FROM users), (SELECT id FROM questions));
+  ((SELECT id FROM users WHERE fname = 'Patsy' ), (SELECT id FROM questions WHERE title = 'Grizzly Question'));
 
 INSERT INTO
   replies (question_id, author_id, parent_reply_id, body)
 VALUES
-  ((SELECT id FROM questions),(SELECT id FROM users), NULL,
-   "body");
+  ((SELECT id FROM questions WHERE title LIKE 'Jane%'),(SELECT author_id FROM questions), 
+   1,'This is the first body'),
+  
+  ((SELECT id FROM questions WHERE title LIKE 'Jane%'),
+  (SELECT author_id FROM questions), (SELECT id FROM replies WHERE body = 'This is the first body'),
+  'This a response');
 
 INSERT INTO
   question_likes (user_id, question_id)
 VALUES
-  ((SELECT id FROM users), (SELECT id FROM questions));
+  ((SELECT id FROM users WHERE fname = 'Jane'), (SELECT id FROM questions WHERE title = 'Patsy Question'));
