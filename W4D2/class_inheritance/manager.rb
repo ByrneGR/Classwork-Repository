@@ -22,7 +22,7 @@ class Manager < Employee
   attr_accessor :employees
   def initialize(name, salary, title, boss = nil)
     @employees = []
-    super
+    super(name, salary, title, boss)
   end
 
   def inherit_employees
@@ -60,6 +60,6 @@ ned.inherit_employees
 # p ned.employees
 # p darren.employees
 
-p ned.bonus(5)
-p darren.bonus(4)
-p david.bonus(3)
+# p ned.bonus(5)
+p darren
+# p david.bonus(3)

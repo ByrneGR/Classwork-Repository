@@ -1,15 +1,14 @@
 require 'byebug'
 def anagram?(str_1, str_2)
-
-  first_anagram?(str_1).include?(str_2)
+  char_count(str_1) == char_count(str_2) 
 end  
 
-def first_anagram?(str)
-  chars = str.split("")
-  chars.permutation.to_a.map {|ele| ele.join("")}
+def char_count(str)
+  hash = Hash.new(0)
+  str.each_char {|char| hash[char] += 1}
+  hash
+end
 
-
-end  
 
 # p first_anagram?("cat")
 
