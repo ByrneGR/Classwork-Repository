@@ -14,15 +14,15 @@ def physics_no_chemistry
   SELECT
     yr
   FROM
-    nobels
+    nobels  
   WHERE
     subject = 'Physics'
   EXCEPT
-    SELECT
+  SELECT
     yr
   FROM
     nobels
   WHERE
-    subject = 'Chemistry'
+    subject = 'Chemistry'      
   SQL
 end

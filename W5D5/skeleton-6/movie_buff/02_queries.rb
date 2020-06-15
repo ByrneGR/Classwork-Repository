@@ -9,13 +9,28 @@ end
 
 def bad_years
   # List the years in which a movie with a rating above 8 was not released.
-  Movie.select(:yr).where()
+  Movie
+  .group(:yr).having('MAX(score) < 8')
+  .pluck(:yr).uniq
 end
 
 def cast_list(title)
   # List all the actors for a particular movie, given the title.
   # Sort the results by starring order (ord). Show the actor id and name.
+  Actor
+  .joins(:movies)
+  .where(movies: {title: title})
+  .order('castings.ord')
+  #.order(castings: :ord)
 
+
+    # Movie
+    # .joins(:actors)
+    # .joins(:castings)
+    # .select(:id, :title)
+    # .where(actors: {name: 'Harrison Ford'})
+    # .where.not(castings: {ord: 1})          #where('castings.ord != 1')
+    # .distinct
 end
 
 def vanity_projects
@@ -24,11 +39,25 @@ def vanity_projects
   # Show the movie id and title and director's name.
 
   # Note: Directors appear in the 'actors' table.
+  Movie
+  .joins(:actors)
+  .select(:id, :title, 'actors.name')
+  .where('castings.ord = 1 AND castings.actor_id = movies.director_id' )
+  .distinct
+
 
 end
 
 def most_supportive
   # Find the two actors with the largest number of non-starring roles.
   # Show each actor's id, name and number of supporting roles.
+  Actor
+  .joins(:castings)
+  .select(:id, :name, 'COUNT(castings.actor_id) as roles')
+  .group(:id)
+  .where('castings.ord != 1')
+  .order('COUNT(castings.actor_id) DESC')
+  .limit(2)
+
 
 end
