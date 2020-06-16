@@ -5,26 +5,28 @@ require 'active_support/inflector'
 
 class SQLObject
   def self.columns
-array= DBConnection.execute2(<<-SQL)
-  SELECT
-    *
-  FROM
-  "#{self.table_name}"
-  SQL
-  array[0].flatten.map {|ele| ele.to_sym}
-
+    if @columns_arr.nil?
+      columns_arr = DBConnection.execute2(<<-SQL)
+      SELECT
+        *
+      FROM
+        "#{self.table_name}"
+      SQL
+      @columns_arr = columns_arr[0].map {|ele| ele.to_sym}
+    else  
+      @columns_arr
+    end
   end
 
   def self.finalize!
     self.columns.each do |column|
       define_method("#{column}") do 
-        @attributes[column]
+        self.attributes[column]
       end
       define_method("#{column}=") do |new_value|
-        @attributes[column] = new_value
+        self.attributes[column] = new_value
       end 
     end 
-    self.finalize!
   end
 
   def self.table_name=(table_name)
