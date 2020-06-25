@@ -1,0 +1,1311 @@
+  [1m[35m (158.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "goal_app_test"[0m
+  [1m[35m (457.5ms)[0m  [1m[35mCREATE DATABASE "goal_app_test" ENCODING = 'unicode'[0m
+  [1m[35m (141.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "goal_app_test"[0m
+  [1m[35m (416.8ms)[0m  [1m[35mCREATE DATABASE "goal_app_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (4.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (33.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (28.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (26.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (12.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200624175546)[0m
+  [1m[35m (23.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-06-24 18:11:19.531323"], ["updated_at", "2020-06-24 18:11:19.531323"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (9.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (9.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (8.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (24.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (9.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (155.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "goal_app_test"[0m
+  [1m[35m (380.0ms)[0m  [1m[35mCREATE DATABASE "goal_app_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (10.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (3.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (59.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL)[0m
+  [1m[35m (9.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200624190704)[0m
+  [1m[35m (3.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200624175546);
+
+[0m
+  [1m[35m (12.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (5.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-06-24 19:14:29.271339"], ["updated_at", "2020-06-24 19:14:29.271339"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (4.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 19:20:50.171433"], ["updated_at", "2020-06-24 19:20:50.171433"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$5JpmREa9Zxw9KmIEdO.MKenQ76IYbQD99sW24un4AgXfhcU4FITjm"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 19:20:55.491503"], ["updated_at", "2020-06-24 19:20:55.491503"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$QZ1REgbPPVh5383uSWyd3Ola3REXn1WQ2Cb3gIL1wtouVDpdHNT9m"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (7.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 19:20:55.915243"], ["updated_at", "2020-06-24 19:20:55.915243"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$yT4yMLxEIPq4gkulMzs/c.T1oO3YltY0wK.fSJS8YJENwlryXzqM2"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (8.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (10.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (6.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (9.9ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 19:33:01.570489"], ["updated_at", "2020-06-24 19:33:01.570489"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$rpmLBEgC1ozKFQtyMk4E1.v.GmLdpNaS6p9qkSpurjavjWM..47/2"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (13.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 19:33:04.158609"], ["updated_at", "2020-06-24 19:33:04.158609"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$JuouXSOf5dJ5nb33aPsGUeVxqQlsbS3zwW0kYIKwYGV9QBFj2QhGm"]]
+  [1m[35m (1.9ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 19:33:04.621314"], ["updated_at", "2020-06-24 19:33:04.621314"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$bN44v9gHLiN/aRawkvqk/e3WiJiAdD9ufxsT9YqDqsrvXKSzaqwR2"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (27.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 19:33:06.178351"], ["updated_at", "2020-06-24 19:33:06.178351"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$uLvtBPVhERPh3BFhTlKQxO3TKMkegOehxAuzPzQ354XrxulXbwt6y"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 19:35:36.932696"], ["updated_at", "2020-06-24 19:35:36.932696"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$ZvbJmJlXuBwAWuhYanmDA.2ABpJYEUFvlO0Mj.aIpoccGVKTNnNFq"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 19:35:38.511806"], ["updated_at", "2020-06-24 19:35:38.511806"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$UFlqQ0xmDeWFIlK2isItRe4DNc7tLMrqrs3QIgpwvKhWUJp.FK6Yy"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 19:35:38.862561"], ["updated_at", "2020-06-24 19:35:38.862561"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$XiypILDuNbmudgo7PwxMjuutTOInHw3EDSJ86znPZRCQqU3hQq2Tu"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 19:35:39.863532"], ["updated_at", "2020-06-24 19:35:39.863532"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$w.SkxYZWEQJqOhEVU/drIexxM5oTU5pvqXHf8XuiLMQfiSaZB91tm"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 19:36:39.144447"], ["updated_at", "2020-06-24 19:36:39.144447"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$I8gfUFDqYtGuW2r8wmXfAOpGazVDJy7VOgC.vLOH9xLnOWKVIJsUm"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 19:36:40.610537"], ["updated_at", "2020-06-24 19:36:40.610537"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$50Y0OVoqy4HALwUkq6U5f.OO8QLxzyNbcNuqDE33VXUYFMO0w3cTe"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 19:36:40.956299"], ["updated_at", "2020-06-24 19:36:40.956299"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$1ZmsgMQ3qDErtCaG5GxFC.tL/9CGiDPfcU/wPgo8MGuW8vkDWwZeC"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 19:36:41.935421"], ["updated_at", "2020-06-24 19:36:41.935421"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$xSL79cN/g88cPKP.TyJvlOJJGD6ShOQQjOw.VLf1bij3cjqt7KiA2"]]
+  [1m[35m (0.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (9.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (9.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (248.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "goal_app_test"[0m
+  [1m[35m (374.0ms)[0m  [1m[35mCREATE DATABASE "goal_app_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (30.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (17.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "goals" CASCADE[0m
+  [1m[35m (54.9ms)[0m  [1m[35mCREATE TABLE "goals" ("id" bigserial primary key, "user_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (14.0ms)[0m  [1m[35mCREATE  INDEX  "index_goals_on_user_id" ON "goals"  ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (15.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "email" character varying NOT NULL, "password_digest" character varying NOT NULL)[0m
+  [1m[35m (16.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (13.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200624193735)[0m
+  [1m[35m (16.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200624190704),
+(20200624175546);
+
+[0m
+  [1m[35m (11.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-06-24 19:41:20.532339"], ["updated_at", "2020-06-24 19:41:20.532339"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 19:41:21.037595"], ["updated_at", "2020-06-24 19:41:21.037595"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$wsyEurr5jHyq3DXJyTb4BuckY.VD1OrK0ANAw/lEjDz9ouI87bUOy"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 19:41:22.710773"], ["updated_at", "2020-06-24 19:41:22.710773"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$spi8BZzjY4wB0qDKjBOrousXvR1rSbT668XxW/5sMwJSo4qmZw4XO"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 19:41:23.052676"], ["updated_at", "2020-06-24 19:41:23.052676"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$YL6uRq.jEquqMwgXF9vrS.OI53qPLvHvODD/ytjJ7OPL1cK7DqGHa"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 19:41:24.095941"], ["updated_at", "2020-06-24 19:41:24.095941"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$0dzybENhOC6IqEz9j515.OVHyz3QjoF5wS7FXPy4lgKAHaEmYjJVu"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:03:32.366208"], ["updated_at", "2020-06-24 20:03:32.366208"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$ASUD1HsEDn6zAJpzo.yY0OSNRhS3WXtUWqUN7080gVx..Ov3IYtPS"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:03:33.952864"], ["updated_at", "2020-06-24 20:03:33.952864"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$Dcpsxwx27Rn7GBvrZf/F2eUOYdGR.iCfZWsgp0qwELoLwCZMctGH6"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:03:34.312393"], ["updated_at", "2020-06-24 20:03:34.312393"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$QZcEasgx/f4zSIhhacLeDuP0ksjHnaSEMkUvFQM0e5WFovdGxUoI."]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:03:35.530160"], ["updated_at", "2020-06-24 20:03:35.530160"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$XV0Hc.S/6TyY9rn3L2g9ee0G8sCTtDGYVmB4549UOk6oy3E3GkZm6"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:03:35.943445"], ["updated_at", "2020-06-24 20:03:35.943445"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$OHZsJQooeGdw.TdhSSV3/OOiNX4gVruCY3U6OSiMbrotatdJcWMVa"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:03:36.343699"], ["updated_at", "2020-06-24 20:03:36.343699"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$cYnme9UVAJVD4.GXDyJxje2mWpkTz5.MFEMqUGbYEGafZLr9C37wW"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (4.1ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:06:39.107883"], ["updated_at", "2020-06-24 20:06:39.107883"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$8l0zVlDCY09y.9nIKiadhOS6ZJ5CfmyX2sSwmpgx8J2806SaxM6vG"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:06:40.730503"], ["updated_at", "2020-06-24 20:06:40.730503"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$fJRE97whcn6vfJZqdzeRxe20G3gRGsylX2aaOM/XUM21g3QqkMVjS"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:06:41.082569"], ["updated_at", "2020-06-24 20:06:41.082569"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$ZbSHupQUb8R7u8cmM6aDMOxnCEd3TH6bcH18/AM850Oxh7BKaYMZa"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:06:42.075960"], ["updated_at", "2020-06-24 20:06:42.075960"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$BO2TTPgCpdACVPiGk0mwiul4idlTaZxZicmzCs7ECM.ZsBw8Kv2TG"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:06:42.432634"], ["updated_at", "2020-06-24 20:06:42.432634"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$VwBcGKpn56uLk3bLVMbVPumA6kkXeICdRoxTHiDJro2wJt5b547lO"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:06:42.775793"], ["updated_at", "2020-06-24 20:06:42.775793"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$A1DyJDGphIaf/MPo4lHkB.LOxHxExCad/6niTK9TnuXtHGsHUdV9K"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (10.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (14.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (4.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:09:55.729217"], ["updated_at", "2020-06-24 20:09:55.729217"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$B9MRg3QW9Wi36JvLEi5/n.75FlHSipnL40MYPQhuGZGkNBr6R.W9y"]]
+  [1m[35m (7.9ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (19.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (4.2ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:09:59.070565"], ["updated_at", "2020-06-24 20:09:59.070565"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$nlhGLjO2CU.YmObbX7e4L.cIU/RrsiQLyD8aEFC0G2U0UGUGGy5su"]]
+  [1m[35m (9.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (27.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (2.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:10:00.029664"], ["updated_at", "2020-06-24 20:10:00.029664"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$YJpxzW3.uTWXpXaz9VLKwOA3VSrhTn7aTT.g8MKgSAepOTcNxInBu"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (17.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (16.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:10:03.533721"], ["updated_at", "2020-06-24 20:10:03.533721"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$BllGEPZip1zI9xt5Wxxs1eAfsJUiSsDV62HJZpiFrhxrfhERlIgFa"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:10:04.289757"], ["updated_at", "2020-06-24 20:10:04.289757"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$KyYHhnfCUBuKBkWXZo3uWOdayEH6Pkw4lBhatRrig/aqbDAZShXUW"]]
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:10:05.087942"], ["updated_at", "2020-06-24 20:10:05.087942"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$UtYYn.lwjG1tEyjk6RhhauYmZ0V58SyyHZyUTO1C1f46na32At5Ny"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (3.9ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:17:02.343402"], ["updated_at", "2020-06-24 20:17:02.343402"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$SNZa/MlhKSMUVdjyarU7Lu95ll/VhBtk/EdJ5q6.4fslMgS6jcQ7O"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:17:03.863926"], ["updated_at", "2020-06-24 20:17:03.863926"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$PnYgJ4XXSJYK6AJEErHwpOdlspx0IcFTo9L6vH1W8RPein1wuTtia"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:17:04.217717"], ["updated_at", "2020-06-24 20:17:04.217717"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$Yutqw7Q5gfgLX6hsClk7MOqFEeS4zg6LkBr0ivUrsPEQ7/Lhitw/6"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:17:05.202175"], ["updated_at", "2020-06-24 20:17:05.202175"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$vSiAbcZADG41ZmlKDdx8DO5FxGaahvplr5pfkvSdJPG5/rN6uqzzy"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:17:05.542635"], ["updated_at", "2020-06-24 20:17:05.542635"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$PaxhuL0fx2aCq1GsqHiYNeMXnO8EShfMWZjS6FTVU7N5Fu.qvTjH6"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:17:06.232719"], ["updated_at", "2020-06-24 20:17:06.232719"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$Bt7TfxakDZ3HCF42MOQm7.PrsYbYqFgVN9oOoRyIr/4W52QnFfyiC"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (9.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (2.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:18:11.135586"], ["updated_at", "2020-06-24 20:18:11.135586"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$wQFCTLpQ5qUFTi3jAtpW/.LQcy0UqJfRNk3FpEysLY33q.9gr7xyG"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:18:11.831162"], ["updated_at", "2020-06-24 20:18:11.831162"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$o0s1IE2IFJ5lHi9NR6HOtecePZ.4l/3iDOynSz8hAMfH4ECeldmYi"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:19:02.381848"], ["updated_at", "2020-06-24 20:19:02.381848"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$5teHSJr4UbCt9qf9hCXHb.IjOywhIBotrFEBg5cJNotNqQHyn5m/K"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:19:03.897394"], ["updated_at", "2020-06-24 20:19:03.897394"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$2AFeQ9nCl6HXUh2SA.8TiO1DtYZ8TGvubgiz9drmu1Uy.zaaAp8KK"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:19:04.247669"], ["updated_at", "2020-06-24 20:19:04.247669"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$Mlxudm0vpAIsYncznbAxfOgjp6yoaPFPKVTwDdHguWK/SQVnMXFtK"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:19:05.221349"], ["updated_at", "2020-06-24 20:19:05.221349"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$zw5NgI0fkQxpnKKQk5tr9.HLXcm14OGtzkL/x2n/KDSpWcHrJcsg6"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:19:05.569458"], ["updated_at", "2020-06-24 20:19:05.569458"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$L65/NiFel3iCzNEzQzK99er8I/BVp2Af91mUpl0UddMYAl3DHJuge"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:19:35.803243"], ["updated_at", "2020-06-24 20:19:35.803243"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$LkpdF./tzXPZf4QVkzb17eHdOypojyIL6eaPu5VX9cN2sXSEp/8d6"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:19:37.383504"], ["updated_at", "2020-06-24 20:19:37.383504"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$pWE7R.rBYTt3WT8JHnVGyeDTH0MqZhhJ3SkH2O1R/XDWpD4F/6aDO"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:19:37.738028"], ["updated_at", "2020-06-24 20:19:37.738028"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$CgKx1ndmwaK0aWosZkXS3u.Kjm2KZpyLr8oHprfG5AG/DdpRsBf/e"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:19:38.763781"], ["updated_at", "2020-06-24 20:19:38.763781"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$nYWjEk5HQczykUgO77mUIO2XNXxSkKgzrZJwwETDKjGwp.95gxFOK"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:19:39.143801"], ["updated_at", "2020-06-24 20:19:39.143801"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$e0FG37ju6ai.pKA8ty5qMO2bf5yvWF0V3bYtHWLtxED/SeLJXnwS."]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:20:53.407046"], ["updated_at", "2020-06-24 20:20:53.407046"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$4nthHiWYzX5mnG4q4YnveuDDsavHCvSRT.c9PhwX/VrNCAzAEWqiG"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:20:55.035629"], ["updated_at", "2020-06-24 20:20:55.035629"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$Jkb0Fw31r1T5joMfyipWHeTnofNrhz892kaFnTSqKS0XrtxDGG4Ve"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:20:55.384966"], ["updated_at", "2020-06-24 20:20:55.384966"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$bRI1NGqtlLvpjuKJgBVggexwdgVdQRMPrqKCSfW1sz5LcSf3q3xbe"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:20:56.362246"], ["updated_at", "2020-06-24 20:20:56.362246"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$UTEPP7OF.RPcFHPmihbTVefbmQkEkhLdpUVIZynRdiLc4U3orT7fy"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:20:56.706011"], ["updated_at", "2020-06-24 20:20:56.706011"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$GGEGS9fRLtffoyztvnYBRO8AUizI34nlcZJME01gEkWe/JdLThLTm"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:20:57.361242"], ["updated_at", "2020-06-24 20:20:57.361242"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$Dmg15pm71MjumNVmsjvzkO35w7BTW7L3zk9ckA11l9SHF42HCV9oS"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (8.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (10.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:54:56.463917"], ["updated_at", "2020-06-24 20:54:56.463917"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$3mxl9SdKDORpahYK.vpZ1.2v/5RhI0Dl3dyHyUwCpkbZckVAoHeKS"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:54:57.593696"], ["updated_at", "2020-06-24 20:54:57.593696"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$7mE9WTYZRJwJqFSqCdNTfuPrwc1hOKW79V86HWifYnUeTYRocRouO"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:54:57.930518"], ["updated_at", "2020-06-24 20:54:57.930518"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$KliAuDEl7D154uWll4229uPwRv8uMMDP188.bMqQCfzpxBH0j83km"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:54:58.920071"], ["updated_at", "2020-06-24 20:54:58.920071"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$bVsZj7j7Szs0a1EPt2kKzOSZwYbtYEaMZTU3QjdnDPTJPaMx.El6S"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:54:59.266311"], ["updated_at", "2020-06-24 20:54:59.266311"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$7zWfu/ErwMTJSFo60rXsa.1xHT4CEoah6ojK6MI1NVFXEeryRyeBi"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (36.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 20:55:00.016300"], ["updated_at", "2020-06-24 20:55:00.016300"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$p0B5FqbKGx./UatzShilE.FaouwIEKOfm0.aOeS2F2IYy1KmraD1y"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (10.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"artem@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:01:02.747474"], ["updated_at", "2020-06-24 21:01:02.747474"], ["email", "artem@gmail.com"], ["password_digest", "$2a$12$Pw8yCpEK.lPfRBvFiA3/5OZ5C4lhIF6Gy64dUEyl4OlBSr0TmP8BK"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users
+Completed 302 Found in 357ms (ActiveRecord: 14.3ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"artem@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (23.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 1403ms (ActiveRecord: 23.5ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:01:04.946176"], ["updated_at", "2020-06-24 21:01:04.946176"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$P8IM1SMI3BMdbJSI8ixbY.fOLKK9Iw5vRp2HHVJiicYp5SbJdUh42"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:01:05.297221"], ["updated_at", "2020-06-24 21:01:05.297221"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$DsdjXc6UfC.lXoy/s6SI5uw12e1gEEHOC64yzEyWxg7xcl9..nqgS"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:01:05.635093"], ["updated_at", "2020-06-24 21:01:05.635093"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$/jJ5RDuH4Y160kIHoHVBU.yqiRt2LcyBuZOvM6b8Ya1YVAN.AIBHS"]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:01:06.619265"], ["updated_at", "2020-06-24 21:01:06.619265"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$r8daersHgh.dsQCNXO4lAeodKGkepxUjA.j9iYstaj0sp2xAH2PF."]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (6.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:01:06.975205"], ["updated_at", "2020-06-24 21:01:06.975205"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$7sb0dwzObzckOISXeO.OxOvHRAHTOYTzzpXWhUsZmAU42d0yaAco."]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:01:07.645026"], ["updated_at", "2020-06-24 21:01:07.645026"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$SlpxEGUtWgdLb/mpg8N.ouGP0imUz8RiL21ZU5w.q/zDZ0ktIX5Vm"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"artem@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:13:13.502711"], ["updated_at", "2020-06-24 21:13:13.502711"], ["email", "artem@gmail.com"], ["password_digest", "$2a$12$eKCTmogH/MkVQ0kmn/kPM.g6ZAx4rcqKX1fQlS.Vsoy5alqFJv9rm"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users
+Completed 302 Found in 355ms (ActiveRecord: 21.2ms)
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"artem@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 1509ms (ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:13:15.843929"], ["updated_at", "2020-06-24 21:13:15.843929"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$edG9QeWsyRbJ5U5iDY9PYuGsC1evQKRnoaUhSYBYv1Mw/GImvHbHu"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:13:16.207816"], ["updated_at", "2020-06-24 21:13:16.207816"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$7OzJ8SouPCtNa6J.kGTGh.J5hjNyPKyLrZROOGX//qX5KONkSv2Xm"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:13:16.583218"], ["updated_at", "2020-06-24 21:13:16.583218"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$gef.9uHgBtELOB5rQnA2PexpYR.pydJORyAJWXlhs.UVHwTdHjoTm"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:13:17.583615"], ["updated_at", "2020-06-24 21:13:17.583615"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$.NDEH923XwaV8XRfowDXoOkS3y3NnKu9SjbRC5ZP4sKD2r2eMOuUO"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:13:17.942973"], ["updated_at", "2020-06-24 21:13:17.942973"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$FerXhrsDXx3C523zEtPJSOOdP2Rl2QTmUpEo77v583MZfRF7Yq6cC"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:13:18.653005"], ["updated_at", "2020-06-24 21:13:18.653005"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$DraUWCFmZtoGvZKDF7jaKueTMJUOrMV89C5yMuwTa38R6yoMZa9XK"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"artem@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (2.3ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:16:21.793338"], ["updated_at", "2020-06-24 21:16:21.793338"], ["email", "artem@gmail.com"], ["password_digest", "$2a$12$zbv/fN1C7Ejtys6XtQ4ch.W24cvKiZ0U0kgfDMZHILNdjoj9ih9z2"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users
+Completed 302 Found in 365ms (ActiveRecord: 15.4ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"artem@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 1321ms (ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2020-06-24 17:16:23 -0400
+  [1m[35m (7.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:16:23.853017"], ["updated_at", "2020-06-24 21:16:23.853017"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$F1lOoEnEC3BqM0Vxp5SlAe3vxzZfjzFTWfCAy/UHA92VYmOP9buU2"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:16:24.206161"], ["updated_at", "2020-06-24 21:16:24.206161"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$4PG5v2Yq4sji1c8cJSx0EOH7JZIyCEGA24HbMXeVyTiX9OOLPDRAi"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:16:24.554847"], ["updated_at", "2020-06-24 21:16:24.554847"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$2QYuoZquL/14VaXQs9vuHuM5JnWEgokk30SwxJxhmgnHRxK4ffzf6"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:16:25.553610"], ["updated_at", "2020-06-24 21:16:25.553610"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$03rHvB1ZxUSI5oOxkEe/deQHoNYrq2PJA5UR5UC3BJ3W9Lanifm8C"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:16:25.905545"], ["updated_at", "2020-06-24 21:16:25.905545"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$GdewZ49aaCd/7csXimwPWOgi0GUn8A5oapxsVbCqAkBPhUYI0tbve"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:16:26.605199"], ["updated_at", "2020-06-24 21:16:26.605199"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$9tbQGquYxuFq8OpHnndCPOQEJps3KTz6ZwtdwTGMoHQrQahwlLVCO"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"artem@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (7.1ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:20:39.312382"], ["updated_at", "2020-06-24 21:20:39.312382"], ["email", "artem@gmail.com"], ["password_digest", "$2a$12$vdEq/JqTA82z7ZRILc6aqeGXkJtKm1tb.0KkFCjrFizknyUhwZ0x6"]]
+  [1m[35m (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users
+Completed 302 Found in 379ms (ActiveRecord: 25.1ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"artem@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 1239ms (ActiveRecord: 0.8ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2020-06-24 17:20:41 -0400
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:20:41.375310"], ["updated_at", "2020-06-24 21:20:41.375310"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$2owBLAD.a7WF/2pmQhIpWO91wAkk3JWnEgd.w8dPwh.1mpvqQOz5e"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:20:41.716233"], ["updated_at", "2020-06-24 21:20:41.716233"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$OPbf6oZodQUMI1BOh1QlIeUh/dmeUgXgoiwqJWogJtAKE/LkvqTC2"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:20:42.048172"], ["updated_at", "2020-06-24 21:20:42.048172"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$RQtL.jnW/r2.xJIKpsiiceyhgcl7n1x3CxLxN7SvrgsJOw10spn1."]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:20:43.013068"], ["updated_at", "2020-06-24 21:20:43.013068"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$V6xiCjFDM.pKFJjomWQkwOFPCz5FSK//P5rDfdl.AuXGEx9.fechS"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:20:43.351706"], ["updated_at", "2020-06-24 21:20:43.351706"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$NEHreUjYh9m1g5.n7mRaiunwjk2aGtHLuBCa.PQug0Czxz5vEiDLC"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:20:44.017639"], ["updated_at", "2020-06-24 21:20:44.017639"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$GC3tTx6r3vrRyng3s8rrEuVDZAp6mjsetQkM/zT86jMsmA7JrKXLG"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (9.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"artem@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:22:30.570794"], ["updated_at", "2020-06-24 21:22:30.570794"], ["email", "artem@gmail.com"], ["password_digest", "$2a$12$VWBk7YUG3MlsWPcE7jYkae4.FzBwbrA63WHYnQvh7VXVoJusWFbKi"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users
+Completed 302 Found in 348ms (ActiveRecord: 16.2ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"artem@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 1373ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2020-06-24 17:22:32 -0400
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:22:32.871436"], ["updated_at", "2020-06-24 21:22:32.871436"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$mkKlbrNoWTvyBbIwYbDnvescdRtwV/PJyFmSMB3nTkRNrp2ksvwUW"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (3.1ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:22:33.277235"], ["updated_at", "2020-06-24 21:22:33.277235"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$0VjLoVavDc/wn2JgIi.e/uE8eDda0AV9WEDuEtzE1.jqSbR6uJZtW"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:22:33.686332"], ["updated_at", "2020-06-24 21:22:33.686332"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$jy9B3cbVqykLYO6R6uVA5.6zoMqBYf6sxsRI994saY0he0pK6tRwu"]]
+  [1m[35m (1.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:22:34.672046"], ["updated_at", "2020-06-24 21:22:34.672046"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$JPkMpszVFPvOSLOC72pQpur//.D8OuVICCqHT16sl99d6a113MkD2"]]
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:22:35.024051"], ["updated_at", "2020-06-24 21:22:35.024051"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$TBvXczbvoVRGmnQGUdBQZ.aV3ythWK1w5tyAocSGUO.qXASV4HBbe"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:22:35.687236"], ["updated_at", "2020-06-24 21:22:35.687236"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$Em2EmCzPL0kphIED1hjr9uwzXlpa47f6ZGDvz3bvJKbHXB6rkIyn2"]]
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"artem@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:24:07.885835"], ["updated_at", "2020-06-24 21:24:07.885835"], ["email", "artem@gmail.com"], ["password_digest", "$2a$12$uFxBl9A5bQV5rTxwyHz3K.n7VYV9ChbOCXNdoxQ6EIlM0Oywx3z8a"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users
+Completed 302 Found in 356ms (ActiveRecord: 19.6ms)
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"artem@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 1456ms (ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2020-06-24 17:24:09 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 459ms (Views: 447.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:24:10.985505"], ["updated_at", "2020-06-24 21:24:10.985505"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$LEtf.dOCeNbj4/A54ku3QOkYZDNDDADAQ5/j6q.8pCuJ4yYaA1eeu"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:24:11.397823"], ["updated_at", "2020-06-24 21:24:11.397823"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$s88iKop9HVZXTgdjPDNOmupNhi5RV5VJXZp0FcwHiWHU8RmXGH7nO"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:24:11.814578"], ["updated_at", "2020-06-24 21:24:11.814578"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$s2XHuxFC.io6cNiQHVtr3uII2HQBbLBCYTjnKyn.OHPw2mUC7Kb8q"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:24:13.268270"], ["updated_at", "2020-06-24 21:24:13.268270"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$MTmg.pFp9uFKhMYhKyurNO5u7x/pW8UHWS4ZedAXfaUOVDclvGRg6"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:24:13.674013"], ["updated_at", "2020-06-24 21:24:13.674013"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$j20Jproc2Ol9.ljlZljmneql/eH3Ufx2NY6Ih/9aGPS6tK4n/6iPe"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:24:14.450922"], ["updated_at", "2020-06-24 21:24:14.450922"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$z.dHsc7.9ApVkCIxStuFnuqQ/NCESB8r4e/RjYpSGO3EfVG4vZAve"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"artem@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:25:30.236345"], ["updated_at", "2020-06-24 21:25:30.236345"], ["email", "artem@gmail.com"], ["password_digest", "$2a$12$ywO0dqqUYTtoXWzk9maktOGHpfyP6y4lFQ9URnsZBfKk6U0h.oEze"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering users/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 372ms (Views: 28.1ms | ActiveRecord: 15.1ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"artem@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 1427ms (ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2020-06-24 17:25:32 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 290ms (Views: 284.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:25:32.967584"], ["updated_at", "2020-06-24 21:25:32.967584"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$bHUgVgv5dR8Cdf0jsWPrseCVUzCsk45VvqGVXhKB8eWoika9nTSS2"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:25:33.327781"], ["updated_at", "2020-06-24 21:25:33.327781"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$8.0DRTM.v51VyMaRsNvoJ.wFt6ATuYXY72Z0iWdrulimRiaEyNjra"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:25:33.813019"], ["updated_at", "2020-06-24 21:25:33.813019"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$irmJMLhWASp5SOXFR53VhOl8JWDKkC65IUr7uTW5Eg1m5qawyohLG"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:25:35.173389"], ["updated_at", "2020-06-24 21:25:35.173389"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$AjE5Or61P/AatYsupmBxU.lN9U3C5aiVdA677b4P8LMIP62lB8tV6"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:25:35.571004"], ["updated_at", "2020-06-24 21:25:35.571004"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$ULy0rUb7tC3DjeBDfhbdeuqcRXQxwRRDR2pSKM.gMvbU4er0r7OKS"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:25:36.240473"], ["updated_at", "2020-06-24 21:25:36.240473"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$vI6GGUPVZtiNv5k3CFWb1e9w9ZRokqIUD/WGL6kUQtTQWexhAF8h."]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"artem@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (6.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:28:03.346409"], ["updated_at", "2020-06-24 21:28:03.346409"], ["email", "artem@gmail.com"], ["password_digest", "$2a$12$fm8uBR4vcwndaMwMlrAp.Ozheg5FyVbFmzzy8fVjPTHPercTy7q8q"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering users/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered users/index.html.erb within layouts/application (0.8ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 383ms (Views: 30.9ms | ActiveRecord: 17.5ms)
+  [1m[35m (1.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"artem@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 1415ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2020-06-24 17:28:05 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 286ms (Views: 277.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2020-06-24 17:28:05 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:28:06.184869"], ["updated_at", "2020-06-24 21:28:06.184869"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$lg9n/UCBedUpxbtqLOj3NOC310Pq8VDIN51CtUmqW4SV/O/YAPfl6"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:28:06.584442"], ["updated_at", "2020-06-24 21:28:06.584442"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$e0Zqk3dR1DzUU7TQEa9e/.gPARYFdDE9nGQYkycA/2UbF2L0c0AVm"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:28:06.963267"], ["updated_at", "2020-06-24 21:28:06.963267"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$o3nznX3M8oq76oypXoG1HOjDIElAmmsdfL.n2lF7Kb9rz4BduhTei"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:28:08.089124"], ["updated_at", "2020-06-24 21:28:08.089124"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$k0GW23k7mmu0YVQqdLjhcertaH4zlPY90ByHDEd/AyjVpScW/7nH."]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:28:08.432918"], ["updated_at", "2020-06-24 21:28:08.432918"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$Lp.Eka9wezr6ThILe1ZkH.nowbzzRhe32dDjZUWqYZS3d4lCen0ia"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (3.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:28:09.112386"], ["updated_at", "2020-06-24 21:28:09.112386"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$XOS1yD8730hmawg32KdQQeb2RN4em0Brk7ReKV5xPlXRT5OFpklAC"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"artem@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:30:01.609132"], ["updated_at", "2020-06-24 21:30:01.609132"], ["email", "artem@gmail.com"], ["password_digest", "$2a$12$9g34hbV1M5ZTFYNgWPNWPe9VsjXBmkt5nqmbLazwa6.VFrrndqRYu"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering users/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered users/index.html.erb within layouts/application (1.8ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 526ms (Views: 65.8ms | ActiveRecord: 28.3ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"artem@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 1956ms (ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2020-06-24 17:30:04 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 379ms (Views: 364.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2020-06-24 17:30:04 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (2.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (21.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:30:05.404858"], ["updated_at", "2020-06-24 21:30:05.404858"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$Xa8XZ2FmGJh2TEKuUsY4Re2P1DDH8mgPEXJIg0g5TW8X5O6Qtyrhi"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (6.1ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:30:05.972777"], ["updated_at", "2020-06-24 21:30:05.972777"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$W62JiDTu7aR/eUgtTiMJw.0QJV56DqGaE8eCHGkZrNqftBofFpRVi"]]
+  [1m[35m (2.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:30:06.586121"], ["updated_at", "2020-06-24 21:30:06.586121"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$Hrb66P2hsPF7aEKbDXytZ.5ybb/2Zjm0.N8V/ZRCQxZ109NnHKkqG"]]
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:30:07.927267"], ["updated_at", "2020-06-24 21:30:07.927267"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$71H.v7QpMWfKPbDfLxQx6uycgGcMMHZeGVs6WYuE/6W4PWulxsG22"]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:30:08.366587"], ["updated_at", "2020-06-24 21:30:08.366587"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$CVWYviTxAxOdD9BPAuKKuurVXV2aA.ulnlRi7hpDDGsqK6qZn2Yzy"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (8.0ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:30:09.415933"], ["updated_at", "2020-06-24 21:30:09.415933"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$PRj6cB2Be4LDW0zy/HKl2O16HcfrvKkTl.2HiBjqpYeaLPO3NqydG"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (8.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"artem@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (19.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:31:00.020866"], ["updated_at", "2020-06-24 21:31:00.020866"], ["email", "artem@gmail.com"], ["password_digest", "$2a$12$bUswdKAlrmncup5o2sCCxOklKfp2SxF6Amz.NMGtK4dV2qtzI7lQW"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering users/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 405ms (Views: 40.2ms | ActiveRecord: 32.5ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"artem@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 1469ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2020-06-24 17:31:01 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 330ms (Views: 324.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2020-06-24 17:31:02 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:31:02.819061"], ["updated_at", "2020-06-24 21:31:02.819061"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$pv0sCk3LPMT.NcAC7pacI.Uz3LwsGU5tlZufqhAFr3bzinbkjxrVW"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:31:03.179913"], ["updated_at", "2020-06-24 21:31:03.179913"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$3hXWo1IexZh.0qhc0/RuQe4GVfzkFA3lwhZxT6dnlI3hrAyBjarGK"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:31:03.516400"], ["updated_at", "2020-06-24 21:31:03.516400"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$euvvSxoICGFpA9/xCQFmTeAnvpzQoheXdM1PdMO3MWbDNRjesVZ6K"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:31:04.771256"], ["updated_at", "2020-06-24 21:31:04.771256"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$MgmzGucImDgfjy9KdUo6T.YjyUrdz6jQEOmqLWEPeud2py0.oK9ie"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (3.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:31:05.708671"], ["updated_at", "2020-06-24 21:31:05.708671"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$E4rsqk/Hsah4vI7l9e5mtupOa7Ao0vIwTLS1C7OXRoAtBt2KeIT.q"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (7.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (8.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:31:06.819272"], ["updated_at", "2020-06-24 21:31:06.819272"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$z0JDbtqMjeahSZZlkqwvceT0qwzak42m.c2V8gVIEQ7zbueKIkuhO"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (1.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (7.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"artem@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (2.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (10.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:55:37.912830"], ["updated_at", "2020-06-24 21:55:37.912830"], ["email", "artem@gmail.com"], ["password_digest", "$2a$12$YRFTyDl6b9Qt.zxBV/5IoujuapsmHXMw88v1h5WAibyfExzI779y2"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering users/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 436ms (Views: 39.3ms | ActiveRecord: 42.6ms)
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"artem@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (6.6ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 1640ms (ActiveRecord: 6.7ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2020-06-24 17:55:40 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 314ms (Views: 303.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2020-06-24 17:55:40 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:55:40.897478"], ["updated_at", "2020-06-24 21:55:40.897478"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$cokLCnfIfhatbQBudHTiu.RulDKWaoJCITsCcE0j8IZKqe75opPqG"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:55:41.299198"], ["updated_at", "2020-06-24 21:55:41.299198"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$73Bcrj/RTiWeRWEwD49H3Ozr9QDRL4I5BNJG2t5tUxY57Lfb6311m"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:55:41.717181"], ["updated_at", "2020-06-24 21:55:41.717181"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$NOJD9nZ.8goWPi816KhTzO3ziFJaDBZrLFCw8iAIP3z2zAukal742"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:55:43.233150"], ["updated_at", "2020-06-24 21:55:43.233150"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$6hGtlmSUuyTnXKdfQ2Ah1uVrBqHPfqmonbGAt5Rd4IHLMhKEd.naK"]]
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (8.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (25.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2020-06-24 21:55:43.682158"], ["updated_at", "2020-06-24 21:55:43.682158"], ["email", "jonathan@fakesite.com"], ["password_digest", "$2a$12$Xe6fhsuJtw4a2ExBEpbI4eArjUxyPIyl7DL0JPbVYXmauyS9A2Hue"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@fakesite.com"], ["LIMIT", 1]]
+  [1m[35m (11.7ms)[0m  [1m[31mROLLBACK[0m
