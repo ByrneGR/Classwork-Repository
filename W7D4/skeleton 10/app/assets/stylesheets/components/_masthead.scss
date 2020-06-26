@@ -4,6 +4,7 @@
 	align-items: center;
 	border-bottom: 2px solid black;
 	position: relative;
+	margin-bottom: -10px 0
 }
 
 .crows_nest {
@@ -33,22 +34,35 @@ hr{
 	background-color: white;
 }
 
+.crows_nest span{
+	color:green;
+}
+
 .lang{
 	// position: absolute;
 	top: 1.5px;
 }
 
 .logo {
-	width: 500px;
+	width: 380px;
 	margin-top: 1px;
+	margin-bottom: -4px;
 	// position: relative;
 	// z-index: 1;	
 }
 .nav_links a{
 	text-decoration: none;
 	color: black;
-	margin: 3px;
+	margin:  3px;
 	font-size: 12px;
+
+
+
+
+
+
+
+
 }
 .nav_links a:hover{
 	text-decoration: none;
@@ -60,7 +74,7 @@ hr{
 	border: none;
 }
 .lower-nav li {
-	margin: 5px;
+	margin: -8px 5px;
 	border-right: 0.5pt solid lightgray;
 	padding-right: 5px;
 	// position: relative;

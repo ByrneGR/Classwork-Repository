@@ -2,12 +2,14 @@
 	<nav class="left-nav">
 		<ul>
 			<li id="sections-sidebar-btn">
+			&nbsp
 				<i class="fa fa-bars"></i>
-				<span>sections</span>
+				<span>&nbsp sections</span>
 			</li>
 			<li id="search-modal-btn">
+			&nbsp
 				<i class="fa fa-search"></i>
-				<span>search</span>
+				<span>&nbsp; search</span>
 			</li>
 		</ul>
 	</nav>
@@ -19,7 +21,10 @@
 			<li>
 			<button>Log In</button>
 			</li>
-			<li><button class='cog'><i class="fas fa-cogs"></i></button></li>
+			<li id="gear-dropdown-btn" class='cog'>
+				<i class="fas fa-cog"></i>
+				<%= render partial: 'shared/gear_dropdown' %>
+			</li>
 		</ul>
 	</nav>
 </header>

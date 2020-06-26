@@ -1,0 +1,26 @@
+.sections_nav {
+    display: flex;
+    align-items: center;
+    flex-direction: column  
+}
+
+.sections_nav ul {
+    display: flex;
+    align-items: center;
+    
+}
+
+.sections_nav ul li a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.sections_nav ul li a:hover {
+  background-color: #e2e2e2;
+  text-decoration: underline;
+}
+
+#locations li:last-child {
+    text-transform: uppercase;
+}
