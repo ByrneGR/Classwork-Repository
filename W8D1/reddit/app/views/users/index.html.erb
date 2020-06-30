@@ -1,0 +1,18 @@
+<table style = "border: 1px solid gray;">
+    <th>Username: </th>
+    <th>Subs:</th>
+<% @users.each do |user| %>
+  <tr><td colspan = "2" style = "background-color:aliceblue;"><%= user.username %></td>
+  </tr>
+    
+    <% user.subs.each do |sub| %>
+    <tr>
+    <td></td>  
+    <td><%=sub.title%></td>  
+    </tr>
+  <% end %>
+    
+  
+<% end %>
+
+</table>

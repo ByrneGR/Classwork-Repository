@@ -1,0 +1,39 @@
+/* PHASE 2: Notifications */
+.badge {
+position: relative;
+}
+
+.badge ul {
+  display: none;
+  position: absolute;
+  background-color: white;
+  color: black;
+  /* padding: 10px 15px; */
+
+}
+
+.badge li {
+    padding: 10px 15px;
+     border: 1px solid grey;
+     border-bottom: none;
+}
+
+.badge:hover > ul {
+  display: block;
+  white-space: nowrap;
+  left: 0px;
+  top: 40px;
+}
+
+/* .badge:hover > ul li {
+  background-color: black;
+  color: white;
+} */
+ 
+.badge li:hover {
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  border: 1px solid grey;
+} 
+

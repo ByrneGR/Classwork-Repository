@@ -1,0 +1,4 @@
+<h1> Create a new kitty! </h1>
+<form action = "<%=cats_url%>" method = "POST">
+<label for = "name"> Name </label> 
+<input id = "name" type = "text" name = "kitty[name]" value = "<%=@kitty.name%>">
