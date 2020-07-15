@@ -1,0 +1,40 @@
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    margin: auto;
+    /* background-color: red; */
+}
+
+li {
+    border: 3px solid black;
+    background-color: gray;
+    /* color: pink; */
+    width: 30%;
+    height: 160px;
+    list-style: none;
+
+}
+
+li:hover {
+    background-color: green;
+}
+
+.white-cell {
+    background-color: white;;
+}
+
+.x::after {
+    content: "X"
+}
+
+.o::after {
+    content: "O"
+}
+
+.x::after, .o::after {
+  font-size: 80px;
+  display: flex;
+  padding-top: 30px;
+  justify-content: center;
+}

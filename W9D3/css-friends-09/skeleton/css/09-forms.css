@@ -1,0 +1,33 @@
+/* PHASE 9: Forms */
+
+
+.main-form {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: grey;
+}
+
+/* .content-main {
+  display: flex;
+  flex-direction: row;
+} */
+.form-field {
+  border: 1px solid black;  
+  display: flex;
+  position: absolute;
+  right: 1px;
+}
+
+
+input {
+    display: block;
+    border: 1px solid black;
+}
+
+button {
+  background-color: limegreen;
+  border-radius: 5px;
+  padding: 10px;
+}
+

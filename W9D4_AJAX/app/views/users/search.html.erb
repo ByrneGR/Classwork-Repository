@@ -1,0 +1,20 @@
+<h1>Search!</h1>
+
+<form action="/users/search" method="GET">
+  <input
+    type="text"
+    name="query"
+    value="<%= @query %>">
+
+  <input type="submit" value="Search Users!">
+</form>
+
+<ul>
+  <% @users.each do |user| %>
+    <li> <!--creates an li for each user-->
+      <a href="<%= user_url(user) %>"><%= user.username %></a>
+      <%= render 'follows/form', user: user %> <!-- creates user obj-->
+      <!--looking for "form" in the "follows" folder-->
+    </li>
+  <% end %>
+</ul>
