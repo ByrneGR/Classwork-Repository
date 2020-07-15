@@ -4,33 +4,33 @@ import ReactDOM from 'react-dom';
 class Tabs extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {selectedTab: 0}
+    this.state = {selectedTab: 0, active: false}
   }
 
   changeTab(idx) {
     this.setState({
       selectedTab: idx
     })
+
   }
-  
+
 
 
   render() {
 
     const title = this.props.tabs.map((tab, idx) => {
-      return ( <h3 key = {idx} onClick ={()=> this.changeTab(idx)}> {tab.title} </h3> )
+      const selected = this.state.selectedTab
+      const klass = idx === selected ? "active" : ""
+      return (<h3 key={idx} className={klass} onClick={() => { this.changeTab(idx)}}> {tab.title} </h3>)
     })
 
-    const content = this.props.tabs.map((tab, idx) => {
-        return (<article key = {idx}> {tab.content} </article>)
-    })
 
     const selectedTab = this.props.tabs[this.state.selectedTab];
     return (
         <div>
-            <h1> Tab </h1>
-            <div className = 'tabs'>
-                <div className='header'>{title}</div>
+            <h1> TabTest </h1>
+        <div className='tabs'>
+          <div className='header'>{title}</div>
                 <div className ='content'> {selectedTab.content} </div>
             </div>
         </div>

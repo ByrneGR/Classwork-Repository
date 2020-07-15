@@ -1,0 +1,15 @@
+.board {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-evenly;
+  background-color: darkgrey;
+  position: absolute;
+  border: outset;
+}
+
+.tile{
+  border: inset;
+}
+
+
+

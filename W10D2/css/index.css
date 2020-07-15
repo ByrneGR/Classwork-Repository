@@ -20,7 +20,8 @@ h2{
 }
 
 .tabs {
-    background-color: aqua;
+    background-color:silver;
+    border: 1px solid black;
 }
 
 .header {
@@ -31,7 +32,7 @@ h2{
 }
 
 h3 {
-    border: solid 1px #ccc; 
+    border: solid 1px black; 
     padding-right: 20px;
     padding-bottom: 20px;
     font-family: 'Fira Code';
@@ -44,13 +45,16 @@ h3 {
     display: flex;
     flex-direction: column;
     height: 100px;
-    background-color: aqua;
+    background-color:silver;
     font-family: 'Fira Code';
     font-size: 20px;
-    border: solid 1px #ccc; 
     text-align: center;
     align-items: center;
     justify-content: center;
+}
+
+.active {
+    border-bottom: none;
 }
 
 
