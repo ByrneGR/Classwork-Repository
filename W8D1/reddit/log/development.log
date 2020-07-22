@@ -4079,3 +4079,7 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.4ms)
 
 
+  [1m[35m (326.8ms)[0m  [1m[35mCREATE DATABASE "reddit_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (250.4ms)[0m  [1m[35mCREATE DATABASE "reddit_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9

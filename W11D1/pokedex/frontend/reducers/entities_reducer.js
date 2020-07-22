@@ -1,9 +1,11 @@
 import pokemonReducer from './pokemon_reducer.js'
 import {combineReducers} from 'redux'
+import itemsReducer from './items_reducer.js'
 
 // debugger
 const entitiesReducer = combineReducers({
   pokemon: pokemonReducer,
+  // items: itemsReducer
 })
 
 // const entitiesReducer = (state = {}, action) => {
