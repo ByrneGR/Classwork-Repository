@@ -1,14 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { receiveOnePokemon, requestOnePokemon } from './actions/pokemon_actions'
-import { fetchAllPokemon } from './util/api_util'
+import { receiveOnePokemon, requestOnePokemon, receiveAllPokemon, requestAllPokemon } from './actions/pokemon_actions'
+import { fetchAllPokemon, fetchOnePokemon } from './util/api_util'
 import configureStore from './store/store'
 import { selectAllPokemon} from './reducers/selectors'
 import Root from './components/root'
 import { HashRouter, Route } from "react-router-dom";
 
 
-// /window.receiveOnePokemon = store.receiveOnePokemon;
+window.receiveOnePokemon = receiveOnePokemon;
+window.requestOnePokemon = requestOnePokemon;
+window.receiveAllPokemon = receiveAllPokemon;
+window.requestAllPokemon = requestAllPokemon;
+window.fetchAllPokemon = fetchAllPokemon;
+window.fetchOnePokemon = fetchOnePokemon;
 
 
 document.addEventListener('DOMContentLoaded', () => {

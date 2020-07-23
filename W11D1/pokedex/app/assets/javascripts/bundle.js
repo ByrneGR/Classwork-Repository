@@ -90,7 +90,7 @@
 /*!*********************************************!*\
   !*** ./frontend/actions/pokemon_actions.js ***!
   \*********************************************/
-/*! exports provided: RECEIVE_ALL_POKEMON, RECEIVE_ONE_POKEMON, receiveAllPokemon, requestAllPokemon */
+/*! exports provided: RECEIVE_ALL_POKEMON, RECEIVE_ONE_POKEMON, receiveAllPokemon, requestAllPokemon, receiveOnePokemon, requestOnePokemon */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -99,6 +99,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_ONE_POKEMON", function() { return RECEIVE_ONE_POKEMON; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveAllPokemon", function() { return receiveAllPokemon; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "requestAllPokemon", function() { return requestAllPokemon; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveOnePokemon", function() { return receiveOnePokemon; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "requestOnePokemon", function() { return requestOnePokemon; });
 /* harmony import */ var _util_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/api_util */ "./frontend/util/api_util.js");
 
 var RECEIVE_ALL_POKEMON = "RECEIVE_ALL_POKEMON";
@@ -117,16 +119,20 @@ var requestAllPokemon = function requestAllPokemon() {
       return dispatch(receiveAllPokemon(pokemon));
     });
   };
-}; // export const receiveOnePokemon = pokemon => ({
-//     type: RECEIVE_ONE_POKEMON,
-//     pokemon
-// })
-// export const requestOnePokemon = () => (dispatch) => {
-//     return (
-//         APIUtil.fetchOnePokemon()
-//         .then(pokemon => dispatch(receiveOnePokemon(pokemon))))
-// }
-// export default receiveAllPokemon(pokemon);
+};
+var receiveOnePokemon = function receiveOnePokemon(pokemon) {
+  return {
+    type: RECEIVE_ONE_POKEMON,
+    pokemon: pokemon
+  };
+};
+var requestOnePokemon = function requestOnePokemon() {
+  return function (dispatch) {
+    return _util_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchOnePokemon"]().then(function (pokemon) {
+      return dispatch(receiveOnePokemon(pokemon));
+    });
+  };
+};
 
 /***/ }),
 
@@ -361,8 +367,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // /window.receiveOnePokemon = store.receiveOnePokemon;
 
+window.receiveOnePokemon = _actions_pokemon_actions__WEBPACK_IMPORTED_MODULE_2__["receiveOnePokemon"];
+window.requestOnePokemon = _actions_pokemon_actions__WEBPACK_IMPORTED_MODULE_2__["requestOnePokemon"];
+window.receiveAllPokemon = _actions_pokemon_actions__WEBPACK_IMPORTED_MODULE_2__["receiveAllPokemon"];
+window.requestAllPokemon = _actions_pokemon_actions__WEBPACK_IMPORTED_MODULE_2__["requestAllPokemon"];
+window.fetchAllPokemon = _util_api_util__WEBPACK_IMPORTED_MODULE_3__["fetchAllPokemon"];
+window.fetchOnePokemon = _util_api_util__WEBPACK_IMPORTED_MODULE_3__["fetchOnePokemon"];
 document.addEventListener('DOMContentLoaded', function () {
   var store = Object(_store_store__WEBPACK_IMPORTED_MODULE_4__["default"])({});
   var rootEl = document.getElementById('root');
@@ -420,11 +431,21 @@ var entitiesReducer = Object(redux__WEBPACK_IMPORTED_MODULE_1__["combineReducers
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_pokemon_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/pokemon_actions */ "./frontend/actions/pokemon_actions.js");
+
+
 var itemsReducer = function itemsReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var action = arguments.length > 1 ? arguments[1] : undefined;
-  Object.freeze(state); // switch(action.type) {
-  // }
+  Object.freeze(state);
+
+  switch (action.type) {
+    case _actions_pokemon_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_ONE_POKEMON"]:
+      return action.pokemon.items;
+
+    default:
+      return state;
+  }
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (itemsReducer);

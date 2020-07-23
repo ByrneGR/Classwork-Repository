@@ -16,16 +16,14 @@ export const requestAllPokemon = () => (dispatch) => {
     .then(pokemon => dispatch(receiveAllPokemon(pokemon))))
 }
 
-// export const receiveOnePokemon = pokemon => ({
-//     type: RECEIVE_ONE_POKEMON,
-//     pokemon
+export const receiveOnePokemon = pokemon => ({
+    type: RECEIVE_ONE_POKEMON,
+    pokemon
 
-// })
+})
 
-// export const requestOnePokemon = () => (dispatch) => {
-//     return (
-//         APIUtil.fetchOnePokemon()
-//         .then(pokemon => dispatch(receiveOnePokemon(pokemon))))
-// }
-
-// export default receiveAllPokemon(pokemon);
+export const requestOnePokemon = () => (dispatch) => {
+    return (
+        APIUtil.fetchOnePokemon()
+        .then(pokemon => dispatch(receiveOnePokemon(pokemon))))
+}
