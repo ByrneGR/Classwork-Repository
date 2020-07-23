@@ -13,14 +13,16 @@ const logoutCurrentUser = () => ({
     type: LOGOUT_CURRENT_USER,
 });
 
-const receiveErrors = (errors) => ({
+const receiveErrors = (errors) => {
+    debugger
+    return {
     type: RECEIVE_ERRORS,
     errors,
-});
+}};
 
-export const signup = user => dispatch => signUp(user).then(user => dispatch(receiveCurrentUser(user)));
+export const signup = user => dispatch => signUp(user).then(user => dispatch(receiveCurrentUser(user)), errors => dispatch(receiveErrors(errors.responseJSON)));
 
-export const login = user => dispatch => logIn(user).then(user => dispatch(receiveCurrentUser(user)));
+export const login = user => dispatch => logIn(user).then(user => dispatch(receiveCurrentUser(user)), errors=> dispatch(receiveErrors(errors.responseJSON)));
 
 export const logout = () => dispatch => logOut().then(() => dispatch(logoutCurrentUser()));
 
