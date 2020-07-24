@@ -8,7 +8,11 @@
 
 
 User.delete_all
+Bench.delete_all
 
 10.times do
   User.create(username: Faker::Games::LeagueOfLegends.unique.champion, password: "legolas")
 end  
+
+Bench.create(description: "corbett", lat: 37.756223 , lng: -122.443151)
+Bench.create(description: "limon", lat: 37.756617, lng: -122.416465)

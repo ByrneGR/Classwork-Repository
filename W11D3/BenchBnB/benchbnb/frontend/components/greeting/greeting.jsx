@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default ({ currentUser, logout}) => {
-  debugger
   const display = currentUser ? (
     <div>
       <p>Hello, {currentUser.username}</p>
